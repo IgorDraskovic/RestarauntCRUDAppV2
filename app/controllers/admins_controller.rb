@@ -1,7 +1,7 @@
 class AdminsController < ApplicationController
 
   def new
-    @Admin = Admin.new
+    @admin = Admin.new
   end
 
   def create
@@ -15,7 +15,7 @@ class AdminsController < ApplicationController
   private
 
   def admin_params
-    params.require(:admin).permit(:admin_name, :password)
+    params.require(:admin).permit(:name, :password)
   end
 
 

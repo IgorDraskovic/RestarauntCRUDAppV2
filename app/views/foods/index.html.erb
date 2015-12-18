@@ -5,8 +5,9 @@
   <% @foods.each do |food| %>
     <li>
       <strong>Cuisine: </strong><%= food.cuisine %>,
-      <strong>Name: </strong><%= food.name %>,
+      <strong>Name: </strong><%= food.name %> ,
       <strong>Cost: </strong><%= food.cost %>,
+      <%= button_to "Remove", food_path(food), method: :delete%>
     </li>
   <% end %>
   </ul>

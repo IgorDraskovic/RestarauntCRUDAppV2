@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def create
-  admin = Admin.find_by_admin_name(params[:admin_name])
+  admin = Admin.find_by_name(params[:name])
   if admin && admin.authenticate(params[:password])
     session[:admin_id] = admin.id
     redirect_to foods_path

@@ -19,6 +19,23 @@ class OrdersController < ApplicationController
     redirect_to orders_path
   end
 
+  def edit
+    @order = Order.find(params[:id])
+  end
+
+  def update
+    order = Order.find(params[:id])
+    order.update( food_params )
+    redirect_to order_path(order) #this can be taco
+  end
+
+  def destroy
+    order = Order.find(params[:id])
+    order.destroy
+    redirect_to orders_path
+  end
+
+
   private
   def order_params
     params.require(:order).permit(:food_id, :party_id, :is_fulfilled)

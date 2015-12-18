@@ -4,8 +4,13 @@
   <ul>
   <% @orders.each do |order| %>
     <li>
+
       <strong>Order</strong>
-      <%= order.food.cuisine %> , <%= order.food.name %> , <%= order.food.cost %> , <%= order.is_fulfilled %>
+    <%= order.party.number %> wants
+    <%= order.food.name %>
+    <%= order.is_fulfilled %> <%= button_to "Remove", order_path, method: :delete %>
     </li>
   <% end %>
   </ul>
+
+  <%= button_to "Remove", order_path(order), method: :delete%>
