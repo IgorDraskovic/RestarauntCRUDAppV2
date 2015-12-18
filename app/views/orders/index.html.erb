@@ -1,16 +1,22 @@
-<h2>Create your Orders!</h2>
+<h2>All Orders!</h2>
+
+<%= button_to "Create Orders", new_order_path, method: :get %>
 
 <h3>Orders List</h3>
   <ul>
   <% @orders.each do |order| %>
     <li>
 
-      <strong>Order</strong>
-    <%= order.party.number %> wants
-    <%= order.food.name %>
-    <%= order.is_fulfilled %> <%= button_to "Remove", order_path, method: :delete %>
+    <strong>Order #<%= order.number %></strong>
+    <%= button_to "Remove", order_path(order), method: :delete%>
+    <%= order.food.cuisine %>,
+    <%= order.food.name %>, For Party #
+    <%= order.party.number %>
+
+
+
+    <%= order.is_fulfilled %>
+
     </li>
   <% end %>
   </ul>
-
-  <%= button_to "Remove", order_path(order), method: :delete%>

@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20151218163903) do
 
   create_table "orders", force: :cascade do |t|
     t.integer  "is_fulfilled"
+    t.integer  "number"
     t.integer  "food_id"
     t.integer  "party_id"
     t.datetime "created_at",   null: false

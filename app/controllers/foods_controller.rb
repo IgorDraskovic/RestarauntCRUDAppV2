@@ -12,7 +12,7 @@ class FoodsController < ApplicationController
 
   def create
     food = Food.create( food_params )
-    redirect_to food_path(food)
+    redirect_to foods_path
   end
 
   def show

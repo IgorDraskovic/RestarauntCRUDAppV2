@@ -5,7 +5,11 @@ and if you select the wrong one it will break.  You need a drop down menu select
 parties
 -->
 <%= form_for @order do |f| %>
+  <%= f.label :number %>
+  <%= f.number_field :number %>
+  <%= f.label :food %>
   <%= f.collection_select(:food_id, Food.all, :id, :name) %>
+  <%= f.label :party %>
   <%= f.collection_select(:party_id, Party.all, :id, :number) %>
   <%= f.submit %>
 <% end %>
