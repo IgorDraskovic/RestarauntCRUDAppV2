@@ -1,0 +1,12 @@
+<h2>Food index</h2>
+
+<h3>Foods List</h3>
+  <ul>
+  <% @foods.each do |food| %>
+    <li>
+      <strong>Cuisine: </strong><%= food.cuisine %>,
+      <strong>Name: </strong><%= food.name %>,
+      <strong>Cost: </strong><%= food.cost %>,
+    </li>
+  <% end %>
+  </ul>

@@ -1,0 +1,11 @@
+<h2>Create your Orders!</h2>
+
+<h3>Orders List</h3>
+  <ul>
+  <% @orders.each do |order| %>
+    <li>
+      <strong>Order</strong>
+      <%= order.food.cuisine %> , <%= order.food.name %> , <%= order.food.cost %> , <%= order.is_fulfilled %>
+    </li>
+  <% end %>
+  </ul>
