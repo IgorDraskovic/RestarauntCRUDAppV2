@@ -1,5 +1,7 @@
 <h2>Log In to Add/Remove Food Items</h2>
 
+<%= button_to "Back to Orders", orders_path, method: :get %>
+
 <%= form_tag sessions_path do %>
   <%= text_field_tag :name %>
   <%= password_field_tag :password %>

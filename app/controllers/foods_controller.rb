@@ -15,18 +15,14 @@ class FoodsController < ApplicationController
     redirect_to foods_path
   end
 
-  def show
-    @food = Food.find(params[:id])
-  end
-
   def edit
     @food = Food.find(params[:id])
   end
 
   def update
     food = Food.find(params[:id])
-    food.update( food_params )
-    redirect_to food_path(food) #this can be taco
+    food.update(food_params)
+    redirect_to foods_path(food) #this can be taco
   end
 
   def destroy

@@ -1,22 +1,20 @@
 <h2>All Orders!</h2>
 
-<%= button_to "Create Orders", new_order_path, method: :get %>
+<%= button_to "Create Orders", new_order_path, method: :get %> <br>
+
+<%= button_to "Admin Menu Options ", foods_path, method: :get %>
+
 
 <h3>Orders List</h3>
   <ul>
   <% @orders.each do |order| %>
     <li>
-
     <strong>Order #<%= order.number %></strong>
-    <%= button_to "Remove", order_path(order), method: :delete%>
     <%= order.food.cuisine %>,
     <%= order.food.name %>, For Party #
-    <%= order.party.number %>
-
-
-
-    <%= order.is_fulfilled %>
-
+    <%= order.party.number %> Total: $
+    <%= order.food.cost %>
+    <%= button_to "Remove", order_path(order), method: :delete%>
     </li>
   <% end %>
   </ul>

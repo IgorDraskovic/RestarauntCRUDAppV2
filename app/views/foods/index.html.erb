@@ -2,9 +2,13 @@
 
 <%= button_to "Back to Orders", orders_path, method: :get %>
 
+<%= button_to "New Menu Item", new_food_path, method: :get %>
+
+
   <ul>
   <% @foods.each do |food| %>
     <li>
+      <%= button_to "Edit Menu Item", edit_food_path(food.id), method: :get %>
       <strong>Cuisine: </strong><%= food.cuisine %>,
       <strong>Name: </strong><%= food.name %> ,
       <strong>Cost: </strong><%= food.cost %>,

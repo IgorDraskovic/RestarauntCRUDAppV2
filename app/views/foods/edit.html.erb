@@ -1,0 +1,9 @@
+<%= form_for @food do |f| %>
+<%= f.label :cuisine %>
+<%= f.text_field :cuisine %>
+<%= f.label :name %>
+<%= f.text_field :name %><br>
+<%= f.label :cost %>
+<%= f.number_field :cost %><br>
+<%= f.submit %>
+<% end %>
