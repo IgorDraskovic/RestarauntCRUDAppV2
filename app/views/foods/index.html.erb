@@ -1,17 +1,26 @@
-<h2>Menu Items</h2>
+<!-- <%= button_to "Back to Orders", orders_path, method: :get, class: 'waves-effect waves-light red btn-large' %> -->
+<!-- <%= button_to "New Menu Item", new_food_path, method: :get, class: 'waves-effect waves-light red btn-large' %> -->
+<!-- <%= button_to "Log-Out", sessions_path, method: :delete, class: 'waves-effect waves-light red btn-large' %> -->
 
-<%= button_to "Back to Orders", orders_path, method: :get, class: 'waves-effect waves-light red btn-large' %>
-<%= button_to "New Menu Item", new_food_path, method: :get, class: 'waves-effect waves-light red btn-large' %>
-<%= button_to "Log-Out", sessions_path, method: :delete, class: 'waves-effect waves-light red btn-large' %>
 
-<br>
+<nav>
+   <div class="nav-wrapper">
+     <a href="#" class="brand-logo center">Menu Items</a>
+     <ul id="nav-mobile" class="left hide-on-med-and-down">
+       <li><%= link_to "Back to Orders", orders_path %></a></li>
+       <li><%= link_to "New Menu Item", new_food_path %></a></li>
+       <li><%= link_to "Log-Out", sessions_path, method: :delete %></a></li>
+     </ul>
+   </div>
+ </nav>
+
 
   <ul>
   <% @foods.each do |food| %>
     <li>
       <strong>Cuisine: </strong><%= food.cuisine %>,
       <strong>Name: </strong><%= food.name %> ,
-      <strong>Cost: </strong><%= food.cost %>, <br>
+      <strong>Cost: </strong><%= food.cost %> <br>
       <%= button_to "Remove", food_path(food), method: :delete, class: 'waves-effect waves-light btn' %>
       <%= button_to "Edit Menu Item", edit_food_path(food.id), method: :get, class: 'waves-effect waves-light btn' %>
     </li>

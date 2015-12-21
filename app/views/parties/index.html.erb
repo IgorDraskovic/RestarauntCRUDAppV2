@@ -1,13 +1,26 @@
-<h3>Tables List</h3>
-
-<%= button_to "Back to Orders", orders_path, method: :get %>
-<%= button_to "Create New Party", new_party_path, method: :get %>
 
 
-  <ul>
+<nav>
+   <div class="nav-wrapper">
+     <a href="#" class="brand-logo center">Parties</a>
+     <ul id="nav-mobile" class="left hide-on-med-and-down">
+       <li><%= link_to "Create Order", orders_path %></a></li>
+       <li><%= link_to "Create Party", new_party_path %></a></li>
+     </ul>
+   </div>
+ </nav>
+
+<!-- <%= button_to "Back to Orders", orders_path, method: :get %> -->
+<!-- <%= button_to "Create New Party", new_party_path, method: :get %> -->
+
   <% @parties.each do |party| %>
+  <ul>
     <li>
-      <strong>Number: </strong><%= party.number %>
+      Party Number: <%= party.number %>
     </li>
+      <% party.foods.each do |food| %>
+      <li>Menu Item: <%= food.name %> - Price: <%= food.cost %></li>
+      <% end %>
+      <li> Total: <%= party.total %> With 15% gratuity: <%= '%.2f' % (party.total + (party.total * 0.15)) %> With 20% gratuity: <%= '%.2f' % (party.total + (party.total * 0.20)) %> </li>
+    </ul>
   <% end %>
-  </ul>

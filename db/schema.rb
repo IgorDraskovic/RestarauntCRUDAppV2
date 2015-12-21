@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20151218163903) do
   create_table "foods", force: :cascade do |t|
     t.string   "cuisine"
     t.string   "name"
-    t.integer  "cost"
+    t.decimal  "cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

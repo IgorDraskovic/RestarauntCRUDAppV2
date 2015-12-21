@@ -25,8 +25,8 @@ class OrdersController < ApplicationController
 
   def update
     order = Order.find(params[:id])
-    order.update( food_params )
-    redirect_to order_path(order) #this can be taco
+    order.update( order_params )
+    redirect_to orders_path #this can be taco
   end
 
   def destroy

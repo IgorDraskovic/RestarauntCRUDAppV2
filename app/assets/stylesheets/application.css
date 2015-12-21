@@ -12,8 +12,7 @@
  *
  *= require_tree .
  *= require_self
- *= require skeleton
- *= require normalize
+ *= require materialize
  */
 
 form {

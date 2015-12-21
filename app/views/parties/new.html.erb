@@ -1,4 +1,11 @@
-<h2>Create a new table</h2>
+<nav>
+   <div class="nav-wrapper">
+     <a href="#" class="brand-logo center">Create New Party</a>
+     <ul id="nav-mobile" class="left hide-on-med-and-down">
+       <li><%= link_to "Parties", parties_path %></a></li>
+     </ul>
+   </div>
+ </nav>
 
 <%= form_for @party do |f| %>
 <%= f.label :number %>
