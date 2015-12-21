@@ -10,7 +10,7 @@ class PartiesController < ApplicationController
 
   def create
     party = Party.create( food_params )
-    redirect_to party_path(party)
+    redirect_to parties_path
   end
 
   def show

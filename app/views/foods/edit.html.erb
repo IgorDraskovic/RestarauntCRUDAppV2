@@ -1,3 +1,8 @@
+<h2>Edit Menu Item</h2>
+
+<%= button_to "Back to Orders", orders_path, method: :get, class: 'waves-effect waves-light red btn-large' %>
+<%= button_to "Admin Menu Options ", foods_path, method: :get, class: 'waves-effect waves-light red btn-large' %>
+
 <%= form_for @food do |f| %>
 <%= f.label :cuisine %>
 <%= f.text_field :cuisine %>

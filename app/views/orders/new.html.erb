@@ -1,9 +1,6 @@
 <h2>Create a new Order</h2>
 
-<!-- Ok but you really need selectors because this way you need to select parties and foods by id number
-and if you select the wrong one it will break.  You need a drop down menu selectors of all of your foods and all of your
-parties
--->
+<ul>
 <%= form_for @order do |f| %>
   <%= f.label :number %>
   <%= f.number_field :number %>
@@ -13,3 +10,4 @@ parties
   <%= f.collection_select(:party_id, Party.all, :id, :number) %>
   <%= f.submit %>
 <% end %>
+</ul>

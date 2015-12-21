@@ -1,20 +1,21 @@
-<h3>Foods List</h3>
+<h2>Foods List</h2>
 
-<%= button_to "Back to Orders", orders_path, method: :get %>
-
-<%= button_to "New Menu Item", new_food_path, method: :get %>
-
+<%= button_to "Back to Orders", orders_path, method: :get, class: 'waves-effect waves-light red btn-large' %>
+<%= button_to "New Menu Item", new_food_path, method: :get, class: 'waves-effect waves-light red btn-large' %>
+<%= button_to "Log-Out", sessions_path, method: :delete, class: 'waves-effect waves-light red btn-large' %>
 
   <ul>
   <% @foods.each do |food| %>
     <li>
-      <%= button_to "Edit Menu Item", edit_food_path(food.id), method: :get %>
+      <h3>
       <strong>Cuisine: </strong><%= food.cuisine %>,
       <strong>Name: </strong><%= food.name %> ,
-      <strong>Cost: </strong><%= food.cost %>,
-      <%= button_to "Remove", food_path(food), method: :delete %>
+      <strong>Cost: </strong><%= food.cost %>, <br>
+      </h3>
+      <%= button_to "Remove", food_path(food), method: :delete, class: 'waves-effect waves-light btn' %>
+      <%= button_to "Edit Menu Item", edit_food_path(food.id), method: :get, class: 'waves-effect waves-light btn' %>
     </li>
   <% end %>
   </ul>
 
-<%= button_to "Log-Out", sessions_path, method: :delete %>
+<%= button_to "Log-Out", sessions_path, method: :delete, class: 'waves-effect waves-light btn' %>
