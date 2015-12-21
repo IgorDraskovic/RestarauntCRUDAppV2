@@ -12,4 +12,15 @@ class Party < ActiveRecord::Base
     return total
   end
 
+  def favorite_food
+      foods = self.foods
+      food_counts = foods.uniq.map do |food|
+        {
+          food: food,
+          count: foods.to_a.count(food)
+        }
+      end
+      largest_count = food_counts.max_by {|c| c[:count]}
+      largest_count[:food]
+    end
 end

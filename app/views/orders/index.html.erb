@@ -1,23 +1,23 @@
 <nav>
-   <div class="nav-wrapper">
-     <a href="#" class="brand-logo center">Orders</a>
-     <ul id="nav-mobile" class="left hide-on-med-and-down">
+   <div class="nav-wrapper grey">
+     <a href="#" class="brand-logo center hide-on-med-and-down">Kitchen Orders</a>
+     <ul id="nav-mobile" class="left">
        <li><%= link_to "New Order", new_order_path %></a></li>
-       <li><%= link_to "Admin Menu ", foods_path %></a></li>
        <li><%= link_to "Parties", parties_path %></a></li>
+       <li><%= link_to "Admin Menu ", foods_path %></a></li>
      </ul>
    </div>
  </nav>
-
+<br>
 <ul>
   <% @orders.each do |order| %>
     <li>
-    <strong>Order #:</strong><%= order.number %>
-    <strong>Cuisine: </strong><%= order.food.cuisine %>
-    <strong>Menu Item: </strong><%= order.food.name %>
-    <strong>For Table: </strong><%= order.party.number %>
-    <%= button_to "Complete", order_path(order), method: :delete, class: 'waves-effect waves-light btn' %>
+    <strong>Order #:</strong><%= order.number %> |
+    <strong>Cuisine: </strong><%= order.food.cuisine %> |
+    <strong>Menu Item: </strong><%= order.food.name %> |
+    <strong>For Table: </strong><%= order.party.number %> <br>
     <%= button_to "Edit Order", edit_order_path(order.id), method: :get, class: 'waves-effect waves-light btn' %>
+    <%= button_to "Complete", order_path(order), method: :delete, class: 'waves-effect waves-light btn' %>
   </li> <br>
   <% end %>
 </ul>

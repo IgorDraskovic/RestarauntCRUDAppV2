@@ -1,7 +1,12 @@
-<h2>Log In to Add/Remove Food Items</h2>
-
-<%= button_to "Sign Up", new_admin_path, method: :get %>
-<%= button_to "Back to Orders", orders_path, method: :get %>
+<nav>
+   <div class="nav-wrapper grey">
+     <a href="#" class="brand-logo center hide-on-med-and-down">Admin Login</a>
+     <ul id="nav-mobile" class="left">
+       <li><%= link_to "Menu Items", foods_path %></a></li>
+       <li><%= link_to "Orders", orders_path %></a></li>
+     </ul>
+   </div>
+ </nav>
 
 <%= form_tag sessions_path do %>
   <%= text_field_tag :name %>

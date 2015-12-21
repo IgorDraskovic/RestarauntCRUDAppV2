@@ -21,4 +21,10 @@ form {
 
 li {
   list-style-type: none;
+  color: dark gray;
+  font-size: 18px;
+}
+
+body {
+  font-family: 'Poiret One', cursive;
 }
