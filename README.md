@@ -1,17 +1,20 @@
 Rails CRUD Application:  RestarauntCRUDAppV2
 
+
 Technologies Used:
--Ruby on Rails
--Materialize CSS framework
--Active Record
--JQuery
--Test Driven Development
--Heroku
+Ruby on Rails
+Materialize CSS framework
+Active Record
+JQuery
+Test Driven Development
+Heroku
 
 Wireframe:
+
 ![alt tag](http://i.imgur.com/U3ZJVES.png)
 
 ERD:
+
 ![alt tag](http://i.imgur.com/gvgdWJ7.png)
 
 RestarauntCRUDAppV2 is a web based application that tracks workflow for a food establishment.  
