@@ -14,7 +14,7 @@
  <% @parties.each do |party| %>
   <ul>
     <li>
-      <h5> Party Number: <%= party.number %> </h5>
+      <h4> Party Number: <%= party.number %> Recept </h4>
     </li>
       <% party.foods.each do |food| %>
       <li>Menu Item: <%= food.name %> - Price: <%= '%.2f' % food.cost %></li>

@@ -1,8 +1,3 @@
-<!-- <%= button_to "Back to Orders", orders_path, method: :get, class: 'waves-effect waves-light red btn-large' %> -->
-<!-- <%= button_to "New Menu Item", new_food_path, method: :get, class: 'waves-effect waves-light red btn-large' %> -->
-<!-- <%= button_to "Log-Out", sessions_path, method: :delete, class: 'waves-effect waves-light red btn-large' %> -->
-
-
 <nav>
    <div class="nav-wrapper grey">
      <a href="#" class="brand-logo center hide-on-med-and-down">Menu Items</a>
@@ -13,8 +8,7 @@
      </ul>
    </div>
  </nav>
-
-
+<br>
   <ul>
   <% @foods.each do |food| %>
     <li>
@@ -23,6 +17,6 @@
       <strong>Cost: </strong><%= '%.2f' % food.cost %> <br>
       <%= button_to "Edit Menu Item", edit_food_path(food.id), method: :get, class: 'waves-effect waves-light btn' %>
       <%= button_to "Remove", food_path(food), method: :delete, class: 'waves-effect waves-light btn' %>
-    </li>
+    </li> <br>
   <% end %>
   </ul>
