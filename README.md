@@ -28,6 +28,10 @@ The application allows you to create new orders in the Kitchen Order view:
 
 ![alt tag](http://i.imgur.com/fin8AhK.png)
 
+In the Kitchen Orders view, orders are color coordinated to notify the kitchen staff how long they have been pending:
+
+![alt tag](http://i.imgur.com/X5EdiB7.png)
+
 In addition, it allows the user to track, and calculate the order total, tax and tip in the Parities view:
 
 ![alt tag](http://i.imgur.com/LPXZjql.png)

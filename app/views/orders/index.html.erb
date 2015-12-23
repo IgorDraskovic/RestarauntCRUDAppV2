@@ -16,8 +16,19 @@
     <strong>Cuisine: </strong><%= order.food.cuisine %> |
     <strong>Menu Item: </strong><%= order.food.name %> |
     <strong>For Table: </strong><%= order.party.number %> <br>
+    <% if order.created_at.to_time > 10.minutes.ago  %>
+      <div class="four column green"><%= order.created_at.to_time.strftime('%l:%M %p %Z')%></div>
+      <% elsif order.created_at.to_time < 10.minutes.ago && order.created_at.to_time > 20.minutes.ago %>
+      <div class="four column yellow"><%= order.created_at.to_time.strftime('%l:%M %p %Z')%></div>
+      <% elsif order.created_at.to_time < 20.minutes.ago %>
+      <div class="four column red"><%= order.created_at.to_time.strftime('%l:%M %p %Z')%></div>
+      <% end %>
     <%= button_to "Edit Order", edit_order_path(order.id), method: :get, class: 'waves-effect waves-light btn' %>
     <%= button_to "Complete", order_path(order), method: :delete, class: 'waves-effect waves-light btn' %>
+
   </li> <br>
+
+
+
   <% end %>
 </ul>
