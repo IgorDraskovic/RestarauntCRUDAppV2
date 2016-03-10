@@ -1,8 +1,18 @@
-<h2>Create New Admin</h2>
+<nav>
+   <div class="nav-wrapper grey">
+     <a href="#" class="brand-logo center hide-on-med-and-down">Create New Admin</a>
+     <ul id="nav-mobile" class="left">
+       <li><%= link_to "Menu Items", foods_path %></a></li>
+       <li><%= link_to "Orders", orders_path %></a></li>
+     </ul>
+   </div>
+ </nav>
 
 
 <%= form_for @admin do |f| %>
+  <%= label_tag(:name, "name") %>
   <%= f.text_field :name %>
+  <%= label_tag(:password, "password") %>
   <%= f.password_field :password %>
   <%= f.submit %>
 <% end %>
